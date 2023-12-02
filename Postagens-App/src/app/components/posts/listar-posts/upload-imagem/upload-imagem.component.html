@@ -1,0 +1,32 @@
+<h1 mat-dialog-title>Fazer Upload</h1>
+<div mat-dialog-content>
+  <div *ngIf="!formulario">
+    <mat-progress-bar mode="buffer"></mat-progress-bar>
+  </div>
+
+  <div class="divCard">
+
+      <form [formGroup]="formulario">
+
+        <div class="divFoto" *ngIf="this.file">
+          <img hidden id="foto" src="#" width="300" height="200" />
+        </div>
+        <input hidden type="file" #fileInput name="nome" formControlName="nome" required (change)="onFileChange($event)" />
+        <br/><br/>
+         <button type="button" mat-stroked-button color="primary" (click)="fileInput.click()">
+         Escolha a imagem
+        </button>
+        <br><br>
+
+         <mat-divider></mat-divider>
+         <mat-dialog-actions align="end">
+          <button mat-button mat-dialog-close>fechar</button>
+          <button mat-button [mat-dialog-close]="true" [disabled]="formulario.invalid" (click)="salvarImagem()">Salvar</button>
+      </mat-dialog-actions>
+
+
+      </form>
+
+  </div>
+</div>
+

@@ -1,0 +1,78 @@
+<div *ngIf="!posts">
+  <mat-progress-bar mode="buffer"></mat-progress-bar>
+</div>
+
+<div class="dadosImagens">
+<div class="cabecalho">
+  <mat-grid-list cols="2" rowHeight="50px">
+    <mat-grid-tile>
+      <h2>Posts Cadastrados</h2>
+    </mat-grid-tile>
+    <mat-grid-tile>
+      <button mat-button class="text-menus" routerLink="/post/cadastrar">
+        Novo Post
+      </button>
+    </mat-grid-tile>
+  </mat-grid-list>
+
+  <table mat-table [dataSource]="posts" class="mat-elevation-z8 tabela" *ngIf="posts && posts?.data?.length; else naoTemPostagem">
+    <ng-container matColumnDef="titulo">
+      <th mat-header-cell *matHeaderCellDef>Título</th>
+      <td mat-cell *matCellDef="let post">{{ post.titulo }}</td>
+    </ng-container>
+
+    <ng-container matColumnDef="conteudo">
+      <th mat-header-cell *matHeaderCellDef>Conteúdo</th>
+      <td mat-cell *matCellDef="let post">{{ post.conteudo }}</td>
+    </ng-container>
+
+    <ng-container matColumnDef="imagem">
+      <th mat-header-cell *matHeaderCellDef>Imagem</th>
+      <td mat-cell *matCellDef="let post">
+        <ng-container *ngIf="post.imagem; else naoexisteimagem">
+          <img [src]="this.caminhoImagem + post.imagem.nome" [style.width.px]="imagemLargura" [style.margin.px]="imagemMargem">
+        </ng-container>
+        <ng-template #naoexisteimagem>
+          <img src="assets/images/sem-imagem.jpg" [style.width.px]="imagemLargura" [style.margin.px]="imagemMargem">
+        </ng-template>
+      </td>
+    </ng-container>
+
+    <ng-container matColumnDef="data">
+      <th mat-header-cell *matHeaderCellDef>Data de cadastro</th>
+      <td mat-cell *matCellDef="let post">
+        <ng-container *ngIf="post.imagem; else naoexisteimagem">
+          {{post.imagem.salvoEm.substring(0, 10)}}
+        </ng-container>
+        <ng-template #naoexisteimagem>
+          Sem Imagem
+        </ng-template>
+      </td>
+    </ng-container>
+
+
+    <ng-container matColumnDef="actions">
+      <th mat-header-cell *matHeaderCellDef>Opções</th>
+      <td mat-cell *matCellDef="let post">
+        <ng-container *ngIf="!post.imagem">
+
+          <button type="button" mat-mini-fab color="success" title="fazer upload" (click)="abrirModalUploadImagem(post.imagem, post)"><mat-icon>cloud</mat-icon></button>
+        </ng-container>
+        <button mat-mini-fab color="primary" title="editar" [routerLink]="['/post/editar/', post.id]"><mat-icon>edit</mat-icon></button>
+        <button mat-mini-fab color="warn" title="excluir" (click)="abrirModalExcluirPostImagem(post.id, post.imagem ? post.imagem.id : null)"><mat-icon>delete_forever</mat-icon></button>
+      </td>
+
+    </ng-container>
+
+    <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+    <tr mat-row *matRowDef="let row; columns: displayedColumns"></tr>
+  </table>
+  <br><br>
+  <ng-template #naoTemPostagem>
+    <div class="MensagemRegistroNaoEncontrado">
+      Nenhum Post Cadastrado.
+    </div>
+  </ng-template>
+  <mat-paginator [length]="pagination.totalItems" [pageSize]="pagination.itemsPerPage"  [pageSizeOptions]="[3, 5, 10]" (page)="pageEvent = $event; pageChanged($event)" showFirstLastButtons></mat-paginator>
+</div>
+</div>

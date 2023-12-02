@@ -1,0 +1,29 @@
+<mat-toolbar fxLayout="row">
+  <div class="title" fxFlex (click)="irParaTelaInicial()">Postagens</div>
+  <button mat-button class="text-menus" fxHide.xs>
+     <mat-icon>input</mat-icon>
+     &nbsp;Login
+  </button>
+
+  <button mat-button class="text-menus" fxHide.xs>
+     <mat-icon>person_add</mat-icon>
+     &nbsp;Cadastrar
+  </button>
+
+  <button mat-icon-button class="menu-hammburguer" [matMenuTriggerFor]="dropMenu" fxHide fxShow.xs>
+      <mat-icon>menu</mat-icon>
+  </button>
+
+  <mat-menu #dropMenu="matMenu" class="menu-toggle">
+    <button mat-button class="text-menus">
+        <mat-icon>input</mat-icon>
+        &nbsp;Login
+    </button>
+    <mat-divider></mat-divider>
+    <button mat-button class="text-menus">
+       <mat-icon>person_add</mat-icon>
+       &nbsp;Cadastrar
+    </button>
+  </mat-menu>
+
+</mat-toolbar>

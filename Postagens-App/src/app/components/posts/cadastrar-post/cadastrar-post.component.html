@@ -1,0 +1,45 @@
+<div *ngIf="!formulario">
+ <mat-progress-bar mode="buffer"></mat-progress-bar>
+</div>
+
+<div class="divCard" *ngIf="formulario">
+  <mat-card>
+  <mat-card-header>
+    <mat-card-title><h3>Cadastro de Posts</h3></mat-card-title>
+  </mat-card-header>
+
+  <form [formGroup]="formulario">
+    <mat-card-content>
+      <div>
+        <mat-form-field>
+          <mat-label>Título</mat-label>
+          <input matInput type="text" formControlName="titulo" autocomplete="off" required placeholder="Digite o Título">
+          <mat-error *ngIf="formulario.get('titulo').hasError('required') &&
+          formulario.get('titulo').touched" class="invalid-feedback">
+              <sup>*</sup>O Campo título é obrigatório
+          </mat-error>
+        </mat-form-field>
+      </div>
+
+      <div>
+        <mat-form-field>
+          <mat-label>Conteúdo</mat-label>
+          <input matInput type="text" formControlName="conteudo" autocomplete="off" required placeholder="Digite o Conteúdo">
+          <mat-error *ngIf="formulario.get('conteudo').hasError('required') &&
+          formulario.get('conteudo').touched" class="invalid-feedback">
+              <sup>*</sup>O Campo conteúdo é obrigatório
+          </mat-error>
+        </mat-form-field>
+      </div>
+
+    </mat-card-content>
+    <mat-divider></mat-divider>
+    <mat-card-actions>
+      <div>
+        <button type="submit" mat-stroked-button [disabled]="formulario.invalid" [ngClass]="formulario.valid ? 'text-menus' : ''" (click)="salvarPost()">Salvar</button>
+        <button mat-stroked-button type="button" class="text-menus" (click)="voltarListagem()">Voltar</button>
+      </div>
+    </mat-card-actions>
+  </form>
+</mat-card>
+</div>

@@ -1,0 +1,50 @@
+.dadosCategorias {
+  padding: 30px 30px 30px 30px;
+}
+
+.cabecalho{
+  padding-top: 30px;
+  padding-bottom: 30px;
+}
+
+.titulo {
+  position: absolute;
+  left: 5px;
+}
+
+.divAutoComplete{
+ padding-top: 30px;
+ padding-bottom: 30px;
+}
+
+.autoCompleteInput {
+   width: 500px;
+}
+
+.divCard{
+ padding: 50px;
+ width: 600px;
+}
+
+.mat-form-field.mat-form-field{
+  width: 500px;
+}
+
+.MensagemRegistroNaoEncontrado {
+  font-size: 110px;
+  margin-top: 10% !important;
+  margin-bottom: 15% !important;
+  text-align: center;
+}
+
+@media screen and (max-width: 1038px) {
+  img {
+    max-width: 70px;
+  }
+}
+
+@media screen and (min-width: 400px) {
+img {
+  min-width: 55px;
+}
+}
