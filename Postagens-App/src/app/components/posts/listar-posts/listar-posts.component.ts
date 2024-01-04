@@ -1,4 +1,4 @@
-import { Component, OnInit, ViewChild } from '@angular/core';
+import { AfterViewInit, Component, ElementRef, OnInit, ViewChild } from '@angular/core';
 import { MatDialog } from '@angular/material/dialog';
 import { MatTableDataSource } from '@angular/material/table';
 import { Imagem } from 'src/app/models/imagem';
@@ -16,7 +16,7 @@ import { MatPaginator, PageEvent } from '@angular/material/paginator';
   templateUrl: './listar-posts.component.html',
   styleUrls: ['./listar-posts.component.css']
 })
-export class ListarPostsComponent implements OnInit {
+export class ListarPostsComponent implements OnInit, AfterViewInit  {
 
   imagemLargura: number = 150;
   imagemMargem: number = 10;
@@ -27,6 +27,11 @@ export class ListarPostsComponent implements OnInit {
   @ViewChild(MatPaginator, { static: true })
   paginator: MatPaginator;
 
+  @ViewChild('paginator', { read: ElementRef })
+  paginatorRef: ElementRef;
+
+  mostrarPaginator: boolean = true;
+
   posts = new MatTableDataSource<Post>();
   displayedColumns: string[];
   caminhoImagem: string = 'http://localhost:5245/Images/';
@@ -35,6 +40,10 @@ export class ListarPostsComponent implements OnInit {
               private dialog: MatDialog,
               private router: Router,
               private sharedService: SharedService) { }
+  ngAfterViewInit(): void {
+    // Esconder o paginator inicialmente
+    this.paginatorRef.nativeElement.style.display = 'none';
+  }
 
   ngOnInit(): void {
      this.pagination = { currentPage: 1, itemsPerPage: 3, totalItems: 1} as Pagination;
@@ -42,6 +51,7 @@ export class ListarPostsComponent implements OnInit {
      this.sharedService.exclusaoConcluida$.subscribe(() => {
       // Atualize a lista de posts quando a exclusão for concluída
       this.pagination = { currentPage: 1, itemsPerPage: 3, totalItems: 1} as Pagination;
+
       this.listarTodosOsPosts();
     });
 
@@ -102,6 +112,12 @@ export class ListarPostsComponent implements OnInit {
         this.pagination = response.pagination;
 
         this.getPaginationTranslateActions();
+
+        // Atualiza a variável mostrarPaginator
+      this.mostrarPaginator = this.posts.data.length > 0;
+
+      // Mostra ou esconde o paginator com base na condição
+      this.paginatorRef.nativeElement.style.display = this.mostrarPaginator ? 'block' : 'none';
 
         console.log(this.posts.data);
      }, (error) => {

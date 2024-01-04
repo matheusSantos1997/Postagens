@@ -17,8 +17,10 @@ namespace Postagens.Domain.Models
 
         public string Conteudo { get; set; }
 
+        #nullable enable
         public long? UsuarioId { get; set; }
 
+        #nullable enable
         public Usuario? Usuario { get; set; }
 
         public Imagem Imagem { get; set; }

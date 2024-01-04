@@ -77,27 +77,76 @@ namespace Postagens.Repository.Migrations
                         .ValueGeneratedOnAdd()
                         .HasColumnType("bigint");
 
-                    b.Property<string>("CPF")
+                    b.Property<string>("Bairro")
                         .IsRequired()
-                        .HasColumnType("varchar(50)");
+                        .HasColumnType("varchar(100)")
+                        .HasColumnName("bairro");
+
+                    b.Property<string>("Cep")
+                        .IsRequired()
+                        .HasColumnType("varchar(9)")
+                        .HasColumnName("cep");
+
+                    b.Property<string>("Cidade")
+                        .IsRequired()
+                        .HasColumnType("varchar(100)")
+                        .HasColumnName("cidade");
+
+                    b.Property<string>("Complemento")
+                        .HasColumnType("varchar(50)")
+                        .HasColumnName("complemento");
+
+                    b.Property<string>("CpfCnpj")
+                        .IsRequired()
+                        .HasColumnType("varchar(32)")
+                        .HasColumnName("cpfCnpj");
 
                     b.Property<string>("Email")
                         .IsRequired()
-                        .HasColumnType("varchar(50)");
+                        .HasColumnType("varchar(100)")
+                        .HasColumnName("email");
+
+                    b.Property<string>("Localidade")
+                        .IsRequired()
+                        .HasColumnType("varchar(100)")
+                        .HasColumnName("localidade");
 
                     b.Property<string>("Nome")
                         .IsRequired()
-                        .HasColumnType("varchar(50)");
+                        .HasColumnType("varchar(50)")
+                        .HasColumnName("nome");
+
+                    b.Property<string>("NomeUsuario")
+                        .IsRequired()
+                        .HasColumnType("varchar(50)")
+                        .HasColumnName("nomeUsuario");
+
+                    b.Property<int>("Numero")
+                        .HasColumnType("int")
+                        .HasColumnName("numero");
+
+                    b.Property<string>("Rua")
+                        .IsRequired()
+                        .HasColumnType("varchar(100)")
+                        .HasColumnName("rua");
 
                     b.Property<string>("Senha")
                         .IsRequired()
-                        .HasColumnType("varchar(50)");
+                        .HasColumnType("varchar(255)")
+                        .HasColumnName("senha");
 
                     b.Property<string>("Telefone")
                         .IsRequired()
-                        .HasColumnType("varchar(50)");
+                        .HasColumnType("varchar(12)")
+                        .HasColumnName("telefone");
 
-                    b.HasKey("Id");
+                    b.Property<string>("Uf")
+                        .IsRequired()
+                        .HasColumnType("varchar(5)")
+                        .HasColumnName("uf");
+
+                    b.HasKey("Id")
+                        .HasName("id");
 
                     b.ToTable("Usuarios", (string)null);
                 });
@@ -124,7 +173,8 @@ namespace Postagens.Repository.Migrations
 
             modelBuilder.Entity("Postagens.Domain.Models.Post", b =>
                 {
-                    b.Navigation("Imagem");
+                    b.Navigation("Imagem")
+                        .IsRequired();
                 });
 
             modelBuilder.Entity("Postagens.Domain.Models.Usuario", b =>
