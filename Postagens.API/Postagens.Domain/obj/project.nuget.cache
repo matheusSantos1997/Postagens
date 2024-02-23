@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "Gr++W+0ZXcGufO8yBBNdAZQQan5AZcHuCezkUMwr9UkseBLvf8wXxjpOGeKsS586/P3M8/pVVqguUML5N3s5WQ==",
+  "dgSpecHash": "SPN+eMPV8Jtob/JlkNnYcc8dqTCaA7OBv7oTnL0gAeXyRMsRJI6gh8LHzbktPosd7H4YiOGfMaX/JFmRSxBJpw==",
   "success": true,
-  "projectFilePath": "C:\\Users\\mathe\\Desktop\\Postagens.API\\Postagens.Domain\\Postagens.Domain.csproj",
+  "projectFilePath": "C:\\Users\\ThinkPad\\Desktop\\Postagens\\Postagens.API\\Postagens.Domain\\Postagens.Domain.csproj",
   "expectedPackageFiles": [],
   "logs": []
 }

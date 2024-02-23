@@ -1,20 +1,23 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\mathe\\Desktop\\Postagens.API\\Postagens.Application\\Postagens.Application.csproj": {}
+    "C:\\Users\\ThinkPad\\Desktop\\Postagens\\Postagens.API\\Postagens.Application\\Postagens.Application.csproj": {}
   },
   "projects": {
-    "C:\\Users\\mathe\\Desktop\\Postagens.API\\Postagens.Application\\Postagens.Application.csproj": {
+    "C:\\Users\\ThinkPad\\Desktop\\Postagens\\Postagens.API\\Postagens.Application\\Postagens.Application.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\mathe\\Desktop\\Postagens.API\\Postagens.Application\\Postagens.Application.csproj",
+        "projectUniqueName": "C:\\Users\\ThinkPad\\Desktop\\Postagens\\Postagens.API\\Postagens.Application\\Postagens.Application.csproj",
         "projectName": "Postagens.Application",
-        "projectPath": "C:\\Users\\mathe\\Desktop\\Postagens.API\\Postagens.Application\\Postagens.Application.csproj",
-        "packagesPath": "C:\\Users\\mathe\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\mathe\\Desktop\\Postagens.API\\Postagens.Application\\obj\\",
+        "projectPath": "C:\\Users\\ThinkPad\\Desktop\\Postagens\\Postagens.API\\Postagens.Application\\Postagens.Application.csproj",
+        "packagesPath": "C:\\Users\\ThinkPad\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\ThinkPad\\Desktop\\Postagens\\Postagens.API\\Postagens.Application\\obj\\",
         "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+        ],
         "configFilePaths": [
-          "C:\\Users\\mathe\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\ThinkPad\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -22,17 +25,17 @@
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-          "https://api.nuget.org/v3/index.json": {}
+          "https://www.nuget.org/api/v2/": {}
         },
         "frameworks": {
           "net6.0": {
             "targetAlias": "net6.0",
             "projectReferences": {
-              "C:\\Users\\mathe\\Desktop\\Postagens.API\\Postagens.Domain\\Postagens.Domain.csproj": {
-                "projectPath": "C:\\Users\\mathe\\Desktop\\Postagens.API\\Postagens.Domain\\Postagens.Domain.csproj"
+              "C:\\Users\\ThinkPad\\Desktop\\Postagens\\Postagens.API\\Postagens.Domain\\Postagens.Domain.csproj": {
+                "projectPath": "C:\\Users\\ThinkPad\\Desktop\\Postagens\\Postagens.API\\Postagens.Domain\\Postagens.Domain.csproj"
               },
-              "C:\\Users\\mathe\\Desktop\\Postagens.API\\Postagens.Repository\\Postagens.Repository.csproj": {
-                "projectPath": "C:\\Users\\mathe\\Desktop\\Postagens.API\\Postagens.Repository\\Postagens.Repository.csproj"
+              "C:\\Users\\ThinkPad\\Desktop\\Postagens\\Postagens.API\\Postagens.Repository\\Postagens.Repository.csproj": {
+                "projectPath": "C:\\Users\\ThinkPad\\Desktop\\Postagens\\Postagens.API\\Postagens.Repository\\Postagens.Repository.csproj"
               }
             }
           }
@@ -41,6 +44,11 @@
           "warnAsError": [
             "NU1605"
           ]
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "direct"
         }
       },
       "frameworks": {
@@ -72,21 +80,24 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.203\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.200\\RuntimeIdentifierGraph.json"
         }
       }
     },
-    "C:\\Users\\mathe\\Desktop\\Postagens.API\\Postagens.Domain\\Postagens.Domain.csproj": {
+    "C:\\Users\\ThinkPad\\Desktop\\Postagens\\Postagens.API\\Postagens.Domain\\Postagens.Domain.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\mathe\\Desktop\\Postagens.API\\Postagens.Domain\\Postagens.Domain.csproj",
+        "projectUniqueName": "C:\\Users\\ThinkPad\\Desktop\\Postagens\\Postagens.API\\Postagens.Domain\\Postagens.Domain.csproj",
         "projectName": "Postagens.Domain",
-        "projectPath": "C:\\Users\\mathe\\Desktop\\Postagens.API\\Postagens.Domain\\Postagens.Domain.csproj",
-        "packagesPath": "C:\\Users\\mathe\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\mathe\\Desktop\\Postagens.API\\Postagens.Domain\\obj\\",
+        "projectPath": "C:\\Users\\ThinkPad\\Desktop\\Postagens\\Postagens.API\\Postagens.Domain\\Postagens.Domain.csproj",
+        "packagesPath": "C:\\Users\\ThinkPad\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\ThinkPad\\Desktop\\Postagens\\Postagens.API\\Postagens.Domain\\obj\\",
         "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+        ],
         "configFilePaths": [
-          "C:\\Users\\mathe\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\ThinkPad\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -94,7 +105,7 @@
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-          "https://api.nuget.org/v3/index.json": {}
+          "https://www.nuget.org/api/v2/": {}
         },
         "frameworks": {
           "net6.0": {
@@ -106,6 +117,11 @@
           "warnAsError": [
             "NU1605"
           ]
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "direct"
         }
       },
       "frameworks": {
@@ -127,21 +143,24 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.203\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.200\\RuntimeIdentifierGraph.json"
         }
       }
     },
-    "C:\\Users\\mathe\\Desktop\\Postagens.API\\Postagens.Repository\\Postagens.Repository.csproj": {
+    "C:\\Users\\ThinkPad\\Desktop\\Postagens\\Postagens.API\\Postagens.Repository\\Postagens.Repository.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\mathe\\Desktop\\Postagens.API\\Postagens.Repository\\Postagens.Repository.csproj",
+        "projectUniqueName": "C:\\Users\\ThinkPad\\Desktop\\Postagens\\Postagens.API\\Postagens.Repository\\Postagens.Repository.csproj",
         "projectName": "Postagens.Repository",
-        "projectPath": "C:\\Users\\mathe\\Desktop\\Postagens.API\\Postagens.Repository\\Postagens.Repository.csproj",
-        "packagesPath": "C:\\Users\\mathe\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\mathe\\Desktop\\Postagens.API\\Postagens.Repository\\obj\\",
+        "projectPath": "C:\\Users\\ThinkPad\\Desktop\\Postagens\\Postagens.API\\Postagens.Repository\\Postagens.Repository.csproj",
+        "packagesPath": "C:\\Users\\ThinkPad\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\ThinkPad\\Desktop\\Postagens\\Postagens.API\\Postagens.Repository\\obj\\",
         "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+        ],
         "configFilePaths": [
-          "C:\\Users\\mathe\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\ThinkPad\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -149,14 +168,14 @@
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-          "https://api.nuget.org/v3/index.json": {}
+          "https://www.nuget.org/api/v2/": {}
         },
         "frameworks": {
           "net6.0": {
             "targetAlias": "net6.0",
             "projectReferences": {
-              "C:\\Users\\mathe\\Desktop\\Postagens.API\\Postagens.Domain\\Postagens.Domain.csproj": {
-                "projectPath": "C:\\Users\\mathe\\Desktop\\Postagens.API\\Postagens.Domain\\Postagens.Domain.csproj"
+              "C:\\Users\\ThinkPad\\Desktop\\Postagens\\Postagens.API\\Postagens.Domain\\Postagens.Domain.csproj": {
+                "projectPath": "C:\\Users\\ThinkPad\\Desktop\\Postagens\\Postagens.API\\Postagens.Domain\\Postagens.Domain.csproj"
               }
             }
           }
@@ -165,6 +184,11 @@
           "warnAsError": [
             "NU1605"
           ]
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "direct"
         }
       },
       "frameworks": {
@@ -240,7 +264,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.203\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.200\\RuntimeIdentifierGraph.json"
         }
       }
     }
